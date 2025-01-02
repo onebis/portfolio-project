@@ -22,7 +22,7 @@ export default function Products() {
         className='w-full'
       >
         <div className='grid grid-cols-12 gap-5 sm:gap-10'>
-          {Object.entries(product_contents).map(([key, item]) => (
+          {Object.entries(product_contents).map(([, item]) => (
             <Link
               key={item.href}
               href={`products/${item.href}`}

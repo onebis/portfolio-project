@@ -1,5 +1,5 @@
 import { Image } from '@nextui-org/image'
-import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
+import { Spacer } from '@nextui-org/react'
 import { MoreButton } from '@/app/_components/MoreButton'
 
 const items = [

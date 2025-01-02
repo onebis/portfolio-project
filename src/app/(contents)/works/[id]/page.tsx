@@ -1,7 +1,6 @@
 'use client'
 import { Button, Chip, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
-import { id } from 'postcss-selector-parser'
 import React from 'react'
 import { work_contents as items } from '@/app/_libs/datas/work_contents'
 

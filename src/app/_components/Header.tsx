@@ -29,7 +29,7 @@ const items = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
-  const closeMenu = () => setIsMenuOpen(false)
+  // const closeMenu = () => setIsMenuOpen(false)
 
   return (
     <Navbar

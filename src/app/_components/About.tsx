@@ -1,6 +1,6 @@
 'use client'
 import { Image } from '@nextui-org/image'
-import { Card, CardHeader, CardBody, CardFooter, User } from '@nextui-org/react'
+import { Card, CardHeader, CardBody } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import React from 'react'
 

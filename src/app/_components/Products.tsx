@@ -1,6 +1,6 @@
 'use client'
 import { Spacer } from '@nextui-org/react'
-import { motion, useInView } from 'framer-motion'
+import { motion } from 'framer-motion'
 import React from 'react'
 import { MoreButton } from '@/app/_components/MoreButton'
 import { BlogProduct } from '@/app/_components/products/BlogProduct'
