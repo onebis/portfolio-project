@@ -3,6 +3,7 @@ import { ReactNode } from 'react'
 export type WorkItemTop = {
   id: number
   icon: ReactNode
+  sort: number
   title: string
   body: string
   term: string

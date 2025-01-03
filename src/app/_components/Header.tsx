@@ -93,7 +93,7 @@ export function Header() {
             isIconOnly
             onPress={toggleLocale}
           >
-            {locale === 'ja' ? 'en' : 'ja'}
+            {locale === 'ja' ? 'En' : '和'}
           </Button>
         </NavbarItem>
         <NavbarItem>
@@ -103,18 +103,13 @@ export function Header() {
           aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           className='sm:hidden'
         />
-        {/*<NavbarItem>*/}
-        {/*  <Button as={Link} href='#' variant='flat' size='sm' isIconOnly>*/}
-        {/*    en*/}
-        {/*  </Button>*/}
-        {/*</NavbarItem>*/}
       </NavbarContent>
 
       <NavbarMenu>
         {items.map((item, index) => (
           <NavbarMenuItem key={`${index}`}>
             <Link
-              onClick={() => setIsMenuOpen(false)}
+              onPress={() => setIsMenuOpen(false)}
               href={getPathname({ locale, href: item.href })}
               className={clsx(
                 'font-potta_one text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',

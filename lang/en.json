@@ -2,13 +2,68 @@
   "Top": {
     "About": {
       "year": "",
-      "body1": "I worked in the service industry",
-      "body2": "I joined an SES company and started my career as an engineer",
-      "body3": "I switched to freelance"
+      "body1": "Engaged in the service industry",
+      "body2": "Joined an SES company and started a career as an engineer",
+      "body3": "Transitioned to freelance work"
+    },
+    "Works": {
+      "scale": "Scale",
+      "position": "Position",
+      "stack": "Tech Stack",
+      "1": {
+        "title": "Job Management System Development",
+        "body": "Took charge as the lead engineer from foundational design. Engaged in overall tasks including technical selection, code review, and specification adjustments, along with client direction.",
+        "term": "2023~2024",
+        "detail": "A project to replace an existing job management system with a new one.\nTook charge as the lead engineer from foundational design. Engaged in overall tasks including technical selection, code review, and specification adjustments, along with client direction.\nAs search performance optimization was essential, there were many considerations regarding the database architecture.\nSince there was no code review culture, I introduced it to ensure code maintainability and safety. Although bugs still occurred, they were minimized.\nI focused on writing code that was easy for team members to work with and ensuring consistency.",
+        "stack": "PHP(ver8.4), Laravel(ver10.13.3), MySQL, nginx",
+        "position": "Lead Engineer, Full-stack Engineer",
+        "scale": "Team of 10 members"
+      },
+      "2": {
+        "title": "HR System Development",
+        "body": "Systemized paper-based HR processes for a major advertising agency. Handled requirements gathering, functional design, and implementation.",
+        "term": "2020~2023",
+        "detail": "Systemized the paper-based HR processes for a major advertising agency.\nPreviously, some processes were managed using Excel and other services, so I developed a system to centralize these processes while integrating with other services.\nI was responsible for a wide range of tasks from requirements gathering to functional design and implementation. The existing employee data was used for authentication, and user access permissions had to be carefully considered.",
+        "stack": "PHP(ver7.4), Laravel(ver8.2.1), MSSQL, nginx",
+        "position": "Full-stack Engineer",
+        "scale": "Team of 8 members"
+      },
+      "3": {
+        "title": "Migration of 6 Million Records",
+        "body": "Performed migration work for a large customer database. Managed tasks as the team leader while working on the migration itself.",
+        "term": "2017~2019",
+        "detail": "Migrated 6 million customer records for a relaxation industry project, involving both system updates and data migration.\nThe migration covered personal data, card information, and history records.\nReduced data migration time from 8 hours to 1 hour by refactoring the existing process, optimizing queries, and improving memory management.\nMaintained data integrity while addressing inaccurate data and unexpected inputs.\nServed as the team leader, handling task management alongside the migration process.",
+        "stack": "PHP, CakePHP(ver3), MySQL, Apache",
+        "position": "Team Leader, Programmer",
+        "scale": "Team of 12 members"
+      },
+      "4": {
+        "title": "Mobile App Development",
+        "body": "Developed a kimono management app using Flutter. Handled notification features and UI design, using Riverpod for state management.",
+        "term": "2023",
+        "detail": "Developed a kimono management app using Flutter, allowing customers to view information about their stored kimonos.\nHandled notification features and basic design implementation. The backend was built using Java for the API.\nRiverpod was used for state management. Data was stored both locally (using shared_preferences) and on a server.\nImplemented push notifications using Firebase. The project followed a clean architecture approach, with appropriate library selection for each use case.",
+        "stack": "Flutter, Riverpod(ver2.1.3), shared_preferences(2.0.15)",
+        "position": "Programmer",
+        "scale": "4 Flutter Engineers, 3 Java Engineers"
+      },
+      "5": {
+        "title": "Local Government DX Project",
+        "body": "Digitalized paper-based administrative processes for a local government, focusing on birth and marriage registration.",
+        "term": "2020",
+        "detail": "Digitalized paper-based administrative processes for a local government in the Kanto region.\nImplemented systems for birth and marriage registrations, handling requirements gathering, database design, and basic implementation.\nSince the team had many junior members, I took on a sub-leader role while contributing to development.",
+        "stack": "PHP, Laravel, MySQL, nginx",
+        "position": "Sub-leader",
+        "scale": "Team of 5 members"
+      },
+      "6": {
+        "title": "Media Industry System Replacement",
+        "body": "Replaced a media management system for a major advertising agency, migrating from Ruby to PHP.",
+        "term": "2019~2020",
+        "detail": "Handled the replacement of a media management system for a major advertising agency, migrating from Ruby (Ruby on Rails) to PHP.\nThe system needed to retain the same functionality and appearance, making it a more complex task compared to standard development.\nSince no design documents were available, the system was recreated directly from the existing source code.\nEventually took on the role of team leader, managing tasks and progress while contributing to implementation.",
+        "stack": "PHP, Laravel, MySQL",
+        "position": "Team Leader, Programmer",
+        "scale": "Team of 8 members"
+      }
     }
-  },
-  "HomePage": {
-    "title": "aa Hello world!",
-    "about": "Go to the about page"
   }
 }
