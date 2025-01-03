@@ -2,9 +2,11 @@
 import { Image } from '@nextui-org/image'
 import { Card, CardBody, Spacer } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 export default function About() {
+  const t = useTranslations('About')
   const ref = React.useRef(null)
 
   return (
@@ -33,18 +35,10 @@ export default function About() {
                   </div>
                 </div>
                 <div className='col-span-6 flex flex-col gap-3 md:col-span-8'>
-                  <p>
-                    フリーランスエンジニアの堀内と申します。創価大学での学びを経て、医師を目指した時期もありましたが、2016年にITの世界に魅了され、この分野でのキャリアをスタートしました。
-                  </p>
-                  <p>
-                    2017年からは、PHPをメイン言語としてWebシステム開発に携わり、さまざまなプロジェクトで技術力を磨いてきました。
-                  </p>
-                  <p>
-                    2019年には独立し、フリーランスとしてより幅広い経験を積むことを決意しました。主な技術スタックは、PHP、Laravel、React、Next.js、Flutterに及びます。
-                  </p>
-                  <p>
-                    クライアントの要望に応えるため柔軟で効率的なソリューションを提供しています。技術を通じてリアルな問題解決を行い、プロジェクトの成功に貢献いたします。
-                  </p>
+                  <p>{t('body1')}</p>
+                  <p>{t('body2')}</p>
+                  <p>{t('body3')}</p>
+                  <p>{t('body4')}</p>
                 </div>
               </div>
             </CardBody>
