@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 
 export function About() {
-  const t = useTranslations('Top.About');
+  const t = useTranslations('Top.About')
 
   const ref = React.useRef(null)
   return (
@@ -32,8 +32,7 @@ export function About() {
               <span className='font-bold'>2016{t('year')}</span> {t('body1')}
             </p>
             <p>
-              <span className='font-bold'>2017{t('year')}</span>{' '}
-              {t('body2')}
+              <span className='font-bold'>2017{t('year')}</span> {t('body2')}
             </p>
             <p>
               <span className='font-bold'>2019{t('year')}</span> {t('body3')}

@@ -2,10 +2,11 @@
 import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from '@nextui-org/react'
 import clsx from 'clsx'
-import { usePathname } from 'next/navigation'
+import { useLocale } from 'next-intl'
 import React from 'react'
 import { ThemeSwitcher } from '@/app/_components/ThemeSwitcher'
 import { GithubIcon } from '@/app/icons/github'
+import { usePathname, getPathname } from '@/i18n/routing'
 
 const items = [
   {
@@ -29,7 +30,7 @@ const items = [
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
-  // const closeMenu = () => setIsMenuOpen(false)
+  const locale = useLocale()
 
   return (
     <Navbar
@@ -51,7 +52,7 @@ export function Header() {
           return (
             <NavbarItem key={item.href}>
               <Link
-                href={item.href}
+                href={getPathname({ locale, href: item.href })}
                 className={clsx(
                   'text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
                   {
@@ -97,7 +98,7 @@ export function Header() {
           <NavbarMenuItem key={`${index}`}>
             <Link
               onClick={() => setIsMenuOpen(false)}
-              href={item.href}
+              href={getPathname({ locale, href: item.href })}
               className={clsx(
                 'font-potta_one text-black hover:text-amber-400 dark:text-white dark:hover:text-amber-300',
                 {

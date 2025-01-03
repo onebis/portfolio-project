@@ -29,7 +29,7 @@ export default function Products() {
               className='col-span-12 w-full sm:col-span-6 md:col-span-4'
             >
               <Card
-                className='relative w-full rounded-xl bg-transparent '
+                className='relative w-full rounded-xl bg-transparent'
                 isHoverable={true}
                 disableRipple
               >
