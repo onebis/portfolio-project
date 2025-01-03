@@ -23,7 +23,7 @@ export function ThemeSwitcher() {
       color='secondary'
       isIconOnly
       size={'sm'}
-      onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+      onPress={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
       {theme === 'dark' ? <Sun /> : <Moon className='fill-amber-50' />}
     </Button>

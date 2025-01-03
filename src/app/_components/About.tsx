@@ -7,8 +7,8 @@ import React from 'react'
 
 export function About() {
   const t = useTranslations('Top.About')
-
   const ref = React.useRef(null)
+
   return (
     <motion.div
       ref={ref}

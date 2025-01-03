@@ -1,12 +1,12 @@
 'use client'
 import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
-import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link } from '@nextui-org/react'
+import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react'
 import clsx from 'clsx'
 import { useLocale } from 'next-intl'
 import React from 'react'
 import { ThemeSwitcher } from '@/app/_components/ThemeSwitcher'
 import { GithubIcon } from '@/app/icons/github'
-import { usePathname, getPathname } from '@/i18n/routing'
+import { usePathname, getPathname, useRouter } from '@/i18n/routing'
 
 const items = [
   {
@@ -31,6 +31,12 @@ export function Header() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
   const pathname = usePathname()
   const locale = useLocale()
+  const router = useRouter()
+
+  const toggleLocale = () => {
+    const newLocale = locale === 'ja' ? 'en' : 'ja'
+    router.push(pathname, { locale: newLocale })
+  }
 
   return (
     <Navbar
@@ -79,6 +85,17 @@ export function Header() {
       </NavbarContent>
 
       <NavbarContent justify='end' className='gap-3'>
+        <NavbarItem>
+          <Button
+            className='bg-amber-400 dark:bg-gray-500 dark:text-black'
+            variant='flat'
+            size='sm'
+            isIconOnly
+            onPress={toggleLocale}
+          >
+            {locale === 'ja' ? 'en' : 'ja'}
+          </Button>
+        </NavbarItem>
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
