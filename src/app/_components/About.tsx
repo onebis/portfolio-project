@@ -2,9 +2,12 @@
 import { Image } from '@nextui-org/image'
 import { Card, CardHeader, CardBody } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 
 export function About() {
+  const t = useTranslations('Top.About');
+
   const ref = React.useRef(null)
   return (
     <motion.div
@@ -26,14 +29,14 @@ export function About() {
           </CardHeader>
           <CardBody>
             <p>
-              <span className='font-bold'>2016年</span> サービス業界に従事
+              <span className='font-bold'>2016{t('year')}</span> {t('body1')}
             </p>
             <p>
-              <span className='font-bold'>2017年</span>{' '}
-              SES会社へ入社。エンジニアとしてのキャリアをスタート
+              <span className='font-bold'>2017{t('year')}</span>{' '}
+              {t('body2')}
             </p>
             <p>
-              <span className='font-bold'>2019年</span> フリーランスへ転向
+              <span className='font-bold'>2019{t('year')}</span> {t('body3')}
             </p>
           </CardBody>
         </Card>

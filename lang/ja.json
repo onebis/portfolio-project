@@ -1,4 +1,12 @@
 {
+  "Top": {
+    "About": {
+      "year": "年",
+      "body1": "サービス業界に従事",
+      "body2": "SES会社へ入社。エンジニアとしてのキャリアをスタート",
+      "body3": "フリーランスへ転向"
+    }
+  },
   "HomePage": {
     "title": "こんにちは!",
     "about": "Go to the about page"
