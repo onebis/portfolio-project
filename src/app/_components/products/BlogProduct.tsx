@@ -13,11 +13,20 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
-import { product_contents } from '@/app/_libs/datas/product_contents'
+import { useTranslations } from 'next-intl'
 
-const item = product_contents.blog_site
 export function BlogProduct() {
+  const t = useTranslations('Top.Products')
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
+
+  const item = {
+    id: 2,
+    image: '/images/blog_image.png',
+    title: t('Blog.title'),
+    stack: t('Blog.stack'),
+    platform: t('Blog.platform'),
+  }
+
   return (
     <>
       <Card
@@ -29,7 +38,7 @@ export function BlogProduct() {
       >
         <CardHeader className='flex-col items-center px-4 pb-0 pt-2 sm:items-start'>
           <h4 className='text-large font-bold'>{item.title}</h4>
-          <small className='text-default-500'>{item.description}</small>
+          <small className='text-default-500'>{item.platform}</small>
           <p className='text-tiny font-bold'>{item.stack}</p>
         </CardHeader>
         <CardBody className='my-2 overflow-visible'>
@@ -54,6 +63,8 @@ const ProductContentModal = ({
   isOpen: boolean
   onOpenChange: () => void
 }) => {
+  const t = useTranslations('Top.Products')
+
   return (
     <Modal
       scrollBehavior={'outside'}
@@ -66,14 +77,14 @@ const ProductContentModal = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className='text-xl'>{item.title}</ModalHeader>
+            <ModalHeader className='text-xl'>{t('Blog.title')}</ModalHeader>
             <ModalBody className='flex flex-col items-start'>
               <ul>
-                <li>coming soon ...</li>
+                <li>{t('Blog.point1')}</li>
               </ul>
               <ul className='text-small text-default-500'>
-                <li>PLATFORM：{item.description}</li>
-                <li>STACK：{item.stack}</li>
+                <li>PLATFORM：{t('Blog.platform')}</li>
+                <li>STACK：{t('Blog.stack')}</li>
               </ul>
               <div className='mt-3 flex w-full justify-center gap-5'>
                 <Image src='/images/blog_image.png' alt='image' width={200} />

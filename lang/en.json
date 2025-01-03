@@ -64,6 +64,27 @@
         "position": "Team Leader, Programmer",
         "scale": "Team of 8 members"
       }
+    },
+    "Products": {
+      "ToDoApp": {
+        "title": "ToDo with Tab",
+        "stack": "Flutter, Dart",
+        "platform": "iOS/Android App",
+        "point1": "Developed a simple ToDo management app",
+        "point2": "Tabs are placed on the right side to enhance user convenience"
+      },
+      "Blog": {
+        "title": "Blog Website Creation",
+        "stack": "NextJS, TypeScript, microCMS",
+        "platform": "Web",
+        "point1": "coming soon ..."
+      },
+      "SampleSite": {
+        "title": "Sample Website Creation",
+        "stack": "NextJS, TypeScript, NextUI",
+        "platform": "Web",
+        "point1": "Created a sample website"
+      }
     }
   }
 }

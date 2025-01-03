@@ -13,12 +13,20 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
-import { product_contents } from '@/app/_libs/datas/product_contents'
-
-const item = product_contents.todoapp
+import { useTranslations } from 'next-intl'
 
 export function ToDoWithTab() {
+  const t = useTranslations('Top.Products')
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
+
+  const item = {
+    id: 1,
+    image: '/images/ToDoWithTabIcon.png',
+    title: t('ToDoApp.title'),
+    stack: t('ToDoApp.stack'),
+    platform: t('ToDoApp.platform'),
+  }
+
   return (
     <>
       <Card
@@ -30,7 +38,7 @@ export function ToDoWithTab() {
       >
         <CardHeader className='flex-col items-center px-4 pb-0 pt-2 sm:items-start'>
           <h4 className='text-large font-bold'>{item.title}</h4>
-          <small className='text-default-500'>{item.description}</small>
+          <small className='text-default-500'>{item.platform}</small>
           <p className='text-tiny font-bold'>{item.stack}</p>
         </CardHeader>
         <CardBody className='my-2 overflow-visible'>
@@ -55,6 +63,7 @@ const ProductContentModal = ({
   isOpen: boolean
   onOpenChange: () => void
 }) => {
+  const t = useTranslations('Top.Products')
   return (
     <Modal
       scrollBehavior={'outside'}
@@ -69,16 +78,16 @@ const ProductContentModal = ({
           <>
             <ModalHeader className='flex items-center gap-3 text-xl'>
               <Image src='images/app_icon.png' alt='image' width={30} radius={'sm'} />
-              {item.title}
+              {t('ToDoApp.title')}
             </ModalHeader>
             <ModalBody className='flex flex-col items-start'>
               <ul>
-                <li>シンプルなToDo管理アプリ開発</li>
-                <li>タブを右に配置しユーザーの使いやすさを追求</li>
+                <li>{t('ToDoApp.point1')}</li>
+                <li>{t('ToDoApp.point2')}</li>
               </ul>
               <ul className='text-small text-default-500'>
-                <li>PLATFORM：{item.description}</li>
-                <li>STACK：{item.stack}</li>
+                <li>PLATFORM：{t('ToDoApp.platform')}</li>
+                <li>STACK：{t('ToDoApp.stack')}</li>
               </ul>
               <div className='flex w-full justify-center gap-5'>
                 <Image src='/images/todo_image1.png' alt='image' width={200} />

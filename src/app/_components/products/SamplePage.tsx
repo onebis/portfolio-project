@@ -13,12 +13,20 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
+import { useTranslations } from 'next-intl'
 import React from 'react'
-import { product_contents } from '@/app/_libs/datas/product_contents'
-
-const item = product_contents.sample_site
 
 export function SamplePage() {
+  const t = useTranslations('Top.Products')
+
+  const item = {
+    id: 3,
+    image: '/images/sample_site.png',
+    title: t('SampleSite.title'),
+    stack: t('SampleSite.stack'),
+    platform: t('SampleSite.platform'),
+  }
+
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   return (
     <>
@@ -31,7 +39,7 @@ export function SamplePage() {
       >
         <CardHeader className='flex-col items-center px-4 pb-0 pt-2 sm:items-start'>
           <h4 className='text-large font-bold'>{item.title}</h4>
-          <small className='text-default-500'>{item.description}</small>
+          <small className='text-default-500'>{item.platform}</small>
           <p className='text-tiny font-bold'>{item.stack}</p>
         </CardHeader>
         <CardBody className='my-2 overflow-visible'>
@@ -56,6 +64,8 @@ const ProductContentModal = ({
   isOpen: boolean
   onOpenChange: () => void
 }) => {
+  const t = useTranslations('Top.Products')
+
   return (
     <Modal
       scrollBehavior={'outside'}
@@ -68,14 +78,14 @@ const ProductContentModal = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className='text-xl'>{item.title}</ModalHeader>
+            <ModalHeader className='text-xl'>{t('SampleSite.title')}</ModalHeader>
             <ModalBody className='flex flex-col items-start'>
               <ul>
-                <li>サンプルサイトを作成</li>
+                <li>{t('SampleSite.point1')}</li>
               </ul>
               <ul className='text-small text-default-500'>
-                <li>PLATFORM：{item.description}</li>
-                <li>STACK：{item.stack}</li>
+                <li>PLATFORM：{t('SampleSite.platform')}</li>
+                <li>STACK：{t('SampleSite.stack')}</li>
               </ul>
               <div className='mt-3 flex w-full justify-center gap-5'>
                 <Link href='https://my-lab-pi.vercel.app/example1' isExternal>

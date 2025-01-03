@@ -64,6 +64,27 @@
         "position": "チームリーダー・プログラマー",
         "scale": "チーム人数8人"
       }
+    },
+    "Products": {
+      "ToDoApp": {
+        "title": "ToDo with Tab",
+        "stack": "Flutter,dart",
+        "platform": "iOS/Androidアプリ",
+        "point1": "シンプルなToDo管理アプリ開発",
+        "point2": "タブを右に配置しユーザーの使いやすさを追求"
+      },
+      "Blog": {
+        "title": "ブログサイト作成",
+        "stack": "NextJS,TypeScript,microCMS",
+        "platform": "web",
+        "point1": "coming soon ..."
+      },
+      "SampleSite": {
+          "title": "サンプルサイト作成",
+          "stack": "NextJs,TypeScript,NextUI",
+          "platform": "web",
+          "point1": "サンプルサイトを作成"
+      }
     }
   }
 }
