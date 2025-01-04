@@ -42,7 +42,7 @@ export default function WorkContent({ params }: { params: { id: number } }) {
         </div>
       </motion.div>
       <div className='flex justify-end'>
-        <Link color='danger' variant='light' href={getPathname({ locale, href: '/works' })}>
+        <Link color='danger' href={getPathname({ locale, href: '/works' })}>
           Back
         </Link>
       </div>
