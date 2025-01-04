@@ -79,6 +79,7 @@
         "title": "ToDo with Tab",
         "stack": "Flutter,dart",
         "platform": "iOS/Androidアプリ",
+        "description": "シンプルなToDo管理アプリ開発 タブを右に配置しユーザーの使いやすさを追求",
         "point1": "シンプルなToDo管理アプリ開発",
         "point2": "タブを右に配置しユーザーの使いやすさを追求"
       },

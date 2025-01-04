@@ -1,26 +1,20 @@
 export const product_contents = {
-  todoapp: {
+  ToDoApp: {
     id: 1,
+    title: 'ToDoApp',
     href: '/todoapp',
     image: '/images/ToDoWithTabIcon.png',
-    title: 'ToDo with Tab',
-    stack: 'Flutter,dart',
-    description: 'iOS/Androidアプリ',
   },
-  blog_site: {
+  Blog: {
     id: 2,
+    title: 'Blog',
     href: '/blog_site',
     image: '/images/blog_image.png',
-    title: 'ブログサイト作成',
-    stack: 'NextJS,TypeScript,microCMS',
-    description: 'web',
   },
-  sample_site: {
+  SampleSite: {
     id: 3,
+    title: 'SampleSite',
     href: '/sample_site',
     image: '/images/sample_site.png',
-    title: 'サンプルサイト作成',
-    stack: 'NextJs,TypeScript,NextUI',
-    description: 'web',
   },
 }

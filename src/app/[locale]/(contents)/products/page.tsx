@@ -2,11 +2,14 @@
 import { Image } from '@nextui-org/image'
 import { Card, CardBody, CardHeader, Spacer, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
-import NextImage from 'next/image'
+import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 import { product_contents } from '@/app/_libs/datas/product_contents'
+import { getPathname } from '@/i18n/routing'
 
 export default function Products() {
+  const t = useTranslations('Top.Products')
+  const locale = useLocale()
   const ref = React.useRef(null)
 
   return (
@@ -24,8 +27,8 @@ export default function Products() {
         <div className='grid grid-cols-12 gap-5 sm:gap-10'>
           {Object.entries(product_contents).map(([, item]) => (
             <Link
-              key={item.href}
-              href={`products/${item.href}`}
+              key={item.id}
+              href={getPathname({ locale, href: 'products/'+item.href })}
               className='col-span-12 w-full sm:col-span-6 md:col-span-4'
             >
               <Card
@@ -34,13 +37,12 @@ export default function Products() {
                 disableRipple
               >
                 <CardHeader className='flex-col items-start px-4 pb-0 pt-2'>
-                  <h4 className='text-large font-bold'>{item.title}</h4>
-                  <small className='text-default-500'>{item.description}</small>
-                  <p className='text-tiny font-bold'>{item.stack}</p>
+                  <h4 className='text-large font-bold'>{t(`${item.title}.title`)}</h4>
+                  <small className='text-default-500'>{t(`${item.title}.platform`)}</small>
+                  <p className='text-tiny font-bold'>{t(`${item.title}.stack`)}</p>
                 </CardHeader>
                 <CardBody className='my-2 flex items-center overflow-visible'>
                   <Image
-                    as={NextImage}
                     src={item.image}
                     alt='native app image'
                     width={270}

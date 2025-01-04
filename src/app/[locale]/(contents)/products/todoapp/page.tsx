@@ -1,11 +1,15 @@
 'use client'
 import { Image } from '@nextui-org/image'
-import { Button, Link } from '@nextui-org/react'
+import { Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
+import { getPathname } from '@/i18n/routing'
 
 export default function TodoApp() {
   const ref = React.useRef(null)
+  const locale = useLocale()
+  const t = useTranslations('Top.Products')
 
   return (
     <div className='w-full'>
@@ -19,20 +23,20 @@ export default function TodoApp() {
       >
         <div className='flex items-center gap-2 text-xl font-bold'>
           <Image src='/images/app_icon.png' alt='image' width={30} radius={'sm'} />
-          ToDoApp with Tab
+          {t('ToDoApp.title')}
         </div>
         <p className='mt-2 text-lg'>
-          シンプルなToDo管理アプリ開発 タブを右に配置しユーザーの使いやすさを追求
+          {t('ToDoApp.description')}
         </p>
         <div>
           <div className='text-small text-default-500'>
-            <p>PLATFORM：iOS/Androidアプリ</p>
-            <p>STACK：Flutter,dart</p>
+            <p>PLATFORM：{t('ToDoApp.platform')}</p>
+            <p>STACK：{t('ToDoApp.stack')}</p>
           </div>
 
           <div className='mt-5 flex w-full justify-center gap-5'>
-            <Image src='/images/todo_image1.png' alt='image' width={200} height={200} />
-            <Image src='/images/todo_image2.png' alt='image' width={200} height={200} />
+            <Image src='/images/todo_image1.png' alt='image' width={200}/>
+            <Image src='/images/todo_image2.png' alt='image' width={200}/>
           </div>
           <div className='mt-6 flex justify-center'>
             <Link href='https://apps.apple.com/ae/app/todo-with-tab/id6461047942'>
@@ -41,9 +45,9 @@ export default function TodoApp() {
           </div>
 
           <div className='flex justify-end'>
-            <Button color='danger' variant='light' as={Link} href={'/products'}>
+            <Link color='danger' variant='light' href={getPathname({ locale, href: '/products' })}>
               Back
-            </Button>
+            </Link>
           </div>
         </div>
       </motion.div>

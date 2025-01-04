@@ -1,12 +1,15 @@
 'use client'
 import { Image } from '@nextui-org/image'
-import { Button } from '@nextui-org/react'
+import { Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
-import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
+import { getPathname } from '@/i18n/routing'
 
 export default function BlogSite() {
   const ref = React.useRef(null)
+  const locale = useLocale()
+  const t = useTranslations('Top.Products')
 
   return (
     <motion.div
@@ -18,12 +21,12 @@ export default function BlogSite() {
       className='w-full'
     >
       <div className='w-full'>
-        <div className='flex items-center gap-2 text-xl font-bold'>ブログサイト作成</div>
-        <p className='mt-2 text-lg'>coming soon ...</p>
+        <div className='flex items-center gap-2 text-xl font-bold'>{t('Blog.title')}</div>
+        <p className='mt-2 text-lg'>{t('Blog.point1')}</p>
         <div>
           <div className='text-small text-default-500'>
-            <p>PLATFORM：web</p>
-            <p>STACK：NextJS,TypeScript,microCMS</p>
+            <p>PLATFORM：{t('Blog.platform')}</p>
+            <p>STACK：{t('Blog.stack')}</p>
           </div>
 
           <div className='mt-5 flex w-full justify-center gap-5'>
@@ -34,9 +37,9 @@ export default function BlogSite() {
           </div>
 
           <div className='flex justify-end'>
-            <Button color='danger' variant='light' as={Link} href={'/products'}>
+            <Link color='danger' variant='light' href={getPathname({ locale, href: '/products' })}>
               Back
-            </Button>
+            </Link>
           </div>
         </div>
       </div>

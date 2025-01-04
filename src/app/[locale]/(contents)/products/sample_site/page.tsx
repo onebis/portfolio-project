@@ -1,11 +1,15 @@
 'use client'
 import { Image } from '@nextui-org/image'
-import { Button, Link } from '@nextui-org/react'
+import { Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
+import { getPathname } from '@/i18n/routing'
 
 export default function SmplePage() {
   const ref = React.useRef(null)
+  const locale = useLocale()
+  const t = useTranslations('Top.Products')
 
   return (
     <motion.div
@@ -17,12 +21,12 @@ export default function SmplePage() {
       className='w-full'
     >
       <div className='w-full'>
-        <div className='flex items-center gap-2 text-xl font-bold'>サンプルサイト作成</div>
-        <p className='mt-2 text-lg'>サンプルサイトを作成</p>
+        <div className='flex items-center gap-2 text-xl font-bold'>{t('SampleSite.title')}</div>
+        <p className='mt-2 text-lg'>{t('SampleSite.point1')}</p>
         <div>
           <div className='text-small text-default-500'>
-            <p>PLATFORM：web</p>
-            <p>STACK：NextJs,TypeScript,NextUI</p>
+            <p>PLATFORM：{t('SampleSite.platform')}</p>
+            <p>STACK：{t('SampleSite.stack')}</p>
           </div>
 
           <div className='mt-5 flex w-full justify-center gap-5'>
@@ -37,9 +41,9 @@ export default function SmplePage() {
           </div>
 
           <div className='flex justify-end'>
-            <Button color='danger' variant='light' as={Link} href={'/products'}>
+            <Link color='danger' variant='light' href={getPathname({ locale, href: '/products' })}>
               Back
-            </Button>
+            </Link>
           </div>
         </div>
       </div>
