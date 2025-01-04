@@ -1,14 +1,16 @@
 'use client'
-import { Button, Chip, Link } from '@nextui-org/react'
+import { Chip, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 import { work_contents } from '@/app/_libs/datas/work_contents'
+import { getPathname } from '@/i18n/routing'
 
 export default function WorkContent({ params }: { params: { id: number } }) {
   const t = useTranslations('Top.Works')
   const item = work_contents.filter((item) => item.id == params.id)[0]
   const ref = React.useRef(null)
+  const locale = useLocale()
 
   return (
     <div className='w-full'>
@@ -40,9 +42,9 @@ export default function WorkContent({ params }: { params: { id: number } }) {
         </div>
       </motion.div>
       <div className='flex justify-end'>
-        <Button color='danger' variant='light' as={Link} href={'/works'}>
+        <Link color='danger' variant='light' href={getPathname({ locale, href: '/works' })}>
           Back
-        </Button>
+        </Link>
       </div>
     </div>
   )
