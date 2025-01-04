@@ -2,10 +2,12 @@
 import { Card, CardBody, CardHeader, Spacer } from '@nextui-org/react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 import React from 'react'
 import { work_contents } from '@/app/_libs/datas/work_contents'
 
 export default function Works() {
+  const t = useTranslations('Top.Works')
   const ref = React.useRef(null)
 
   return (
@@ -26,7 +28,7 @@ export default function Works() {
             .map((item) => (
               <Link
                 href={`works/${item.id}`}
-                key={item.title}
+                key={item.id}
                 className='col-span-12 w-full sm:col-span-6 md:col-span-4'
               >
                 <Card
@@ -38,10 +40,10 @@ export default function Works() {
                     {item.icon}
                   </CardHeader>
                   <CardBody className='flex-col items-start px-4'>
-                    <p className='text-small text-default-500'> {item.term}</p>
+                    <p className='text-small text-default-500'>{t(`${item.id}.term`)}</p>
 
-                    <p className='flex items-center text-lg font-bold'>{item.title}</p>
-                    <small className='mt-3 text-default-500'>{item.body}</small>
+                    <p className='flex items-center text-lg font-bold'>{t(`${item.id}.title`)}</p>
+                    <small className='mt-3 text-default-500'>{t(`${item.id}.body`)}</small>
                   </CardBody>
                 </Card>
               </Link>

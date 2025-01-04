@@ -18,7 +18,7 @@ import { useTranslations } from 'next-intl'
 import React from 'react'
 import { WorkItemTop } from '@/app/_libs/type'
 
-export function WorkContent({ key, item }: { key: string; item: WorkItemTop }) {
+export function WorkContent({ key, item }: { key: number; item: WorkItemTop }) {
   const t = useTranslations('Top.Works')
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
   const ref = React.useRef(null)
@@ -44,10 +44,9 @@ export function WorkContent({ key, item }: { key: string; item: WorkItemTop }) {
             {item.icon}
           </CardHeader>
           <CardBody className='flex-col items-start px-4'>
-            <p className='text-small text-default-500'> {item.term}</p>
-
-            <p className='flex items-center text-lg font-bold'>{item.title}</p>
-            <small className='mt-3 text-default-500'>{item.body}</small>
+            <p className='text-small text-default-500'> {t(`${item.id}.term`)}</p>
+            <p className='flex items-center text-lg font-bold'>{t(`${item.id}.title`)}</p>
+            <small className='mt-3 text-default-500'>{t(`${item.id}.body`)}</small>
           </CardBody>
         </Card>
         <Modal
@@ -62,26 +61,26 @@ export function WorkContent({ key, item }: { key: string; item: WorkItemTop }) {
             {(onClose) => (
               <>
                 <ModalHeader className='flex items-center gap-2 text-xl'>
-                  {item.title}
+                  {t(`${item.id}.title`)}
                   <Chip size={'sm'} variant='faded'>
-                    {item.term}
+                    {t(`${item.id}.term`)}
                   </Chip>
                 </ModalHeader>
                 <ModalBody>
-                  {item.detail.split('\n').map((line, index) => (
+                  {t(`${item.id}.detail`).split('\n').map((line, index) => (
                     <p key={index} className='text-lg'>
                       {line}
                     </p>
                   ))}
                   <div className='mt-10 text-small'>
                     <p>
-                      {t('scale')}：{item.scale}
+                      {t('scale')}：{t(`${item.id}.scale`)}
                     </p>
                     <p>
-                      {t('position')}：{item.position}
+                      {t('position')}：{t(`${item.id}.position`)}
                     </p>
                     <p>
-                      {t('stack')}：{item.stack}
+                      {t('stack')}：{t(`${item.id}.stack`)}
                     </p>
                   </div>
                 </ModalBody>

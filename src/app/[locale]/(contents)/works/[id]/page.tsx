@@ -1,11 +1,13 @@
 'use client'
 import { Button, Chip, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { useTranslations } from 'next-intl'
 import React from 'react'
-import { work_contents as items } from '@/app/_libs/datas/work_contents'
+import { work_contents } from '@/app/_libs/datas/work_contents'
 
 export default function WorkContent({ params }: { params: { id: number } }) {
-  const item = items.filter((item) => item.id == params.id)[0]
+  const t = useTranslations('Top.Works')
+  const item = work_contents.filter((item) => item.id == params.id)[0]
   const ref = React.useRef(null)
 
   return (
@@ -19,21 +21,21 @@ export default function WorkContent({ params }: { params: { id: number } }) {
         className='w-full'
       >
         <div className='flex items-center gap-2 text-xl font-bold'>
-          {item.title}
+          {t(`${item.id}.title`)}:
           <Chip size={'sm'} variant='faded'>
-            {item.term}
+            {t(`${item.id}.term`)}
           </Chip>
         </div>
         <div className='mt-10'>
-          {item.detail.split('\n').map((line, index) => (
+          {t(`${item.id}.detail`).split('\n').map((line, index) => (
             <p key={index} className='mt-4 text-lg'>
               {line}
             </p>
           ))}
           <div className='mt-10 text-small'>
-            <p>規模：{item.scale}</p>
-            <p>ポジション：{item.position}</p>
-            <p>STACK：{item.stack}</p>
+            <p>{t('scale')}：{t(`${item.id}.scale`)}</p>
+            <p>{t('position')}：{t(`${item.id}.position`)}</p>
+            <p>{t('stack')}：{t(`${item.id}.stack`)}</p>
           </div>
         </div>
       </motion.div>

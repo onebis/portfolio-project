@@ -4,13 +4,6 @@ export type WorkItemTop = {
   id: number
   icon: ReactNode
   sort: number
-  title: string
-  body: string
-  term: string
-  detail: string
-  stack: string
-  position: string
-  scale: string
 }
 
 export type ProductItemTop = {

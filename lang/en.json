@@ -63,6 +63,15 @@
         "stack": "PHP, Laravel, MySQL",
         "position": "Team Leader, Programmer",
         "scale": "Team of 8 members"
+      },
+      "7": {
+        "title": "Real Estate System Development",
+        "body": "Developed an after-sales service system for real estate customers.",
+        "term": "2019",
+        "detail": "Developed an after-sales service system for real estate customers. Conducted requirement definitions and developed the system alongside the team leader. Handled both front-end and back-end tasks, including implementing login functionality and basic CRUD operations.",
+        "stack": "PHP, Laravel, MySQL",
+        "position": "Programmer",
+        "scale": "Team of 2 members"
       }
     },
     "Products": {
