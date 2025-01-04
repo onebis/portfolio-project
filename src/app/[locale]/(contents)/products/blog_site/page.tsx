@@ -37,7 +37,7 @@ export default function BlogSite() {
           </div>
 
           <div className='flex justify-end'>
-            <Link color='danger' variant='light' href={getPathname({ locale, href: '/products' })}>
+            <Link color='danger' href={getPathname({ locale, href: '/products' })}>
               Back
             </Link>
           </div>

@@ -6,7 +6,7 @@ import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 import { getPathname } from '@/i18n/routing'
 
-export default function SmplePage() {
+export default function SamplePage() {
   const ref = React.useRef(null)
   const locale = useLocale()
   const t = useTranslations('Top.Products')
@@ -41,7 +41,7 @@ export default function SmplePage() {
           </div>
 
           <div className='flex justify-end'>
-            <Link color='danger' variant='light' href={getPathname({ locale, href: '/products' })}>
+            <Link color='danger' href={getPathname({ locale, href: '/products' })}>
               Back
             </Link>
           </div>
