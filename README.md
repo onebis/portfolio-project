@@ -24,7 +24,7 @@
 
 ```bash
 npm install portfolio-project
-npm yarn dev
+npm run dev
 ```
 
 
