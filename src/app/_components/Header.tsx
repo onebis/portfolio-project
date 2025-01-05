@@ -47,7 +47,7 @@ export function Header() {
     >
       <NavbarContent>
         <NavbarBrand>
-          <Link href='/'>
+          <Link href={getPathname({ locale, href: '/' })}>
             <p className='font-bold text-inherit'>ACME</p>
           </Link>
         </NavbarBrand>
@@ -73,7 +73,7 @@ export function Header() {
         })}
         <NavbarItem>
           <Link
-            href='https://github.com/onebis/my-portfolio'
+            href='https://github.com/onebis/portfolio-project'
             color='foreground'
             className='flex items-center hover:text-amber-400 dark:hover:text-amber-300'
             showAnchorIcon

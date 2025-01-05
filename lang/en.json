@@ -9,48 +9,48 @@
     "Works": {
       "scale": "Scale",
       "position": "Position",
-      "stack": "Tech Stack",
+      "stack": "Stack",
       "1": {
         "title": "Job Management System Development",
-        "body": "Took charge as the lead engineer from foundational design. Engaged in overall tasks including technical selection, code review, and specification adjustments, along with client direction.",
+        "body": "Acted as the lead engineer, responsible from foundational design. Engaged in overall tasks including technical selection, code review, specification adjustments, and client communication.",
         "term": "2023~2024",
-        "detail": "A project to replace an existing job management system with a new one.\nTook charge as the lead engineer from foundational design. Engaged in overall tasks including technical selection, code review, and specification adjustments, along with client direction.\nAs search performance optimization was essential, there were many considerations regarding the database architecture.\nSince there was no code review culture, I introduced it to ensure code maintainability and safety. Although bugs still occurred, they were minimized.\nI focused on writing code that was easy for team members to work with and ensuring consistency.",
+        "detail": "A project to replace an existing job management system with a new one. Took charge as the lead engineer from foundational design. Engaged in all aspects, including technical selection, code review, specification adjustments, and client communication. Since fast search processing was essential, many considerations were made regarding the database architecture.\nIntroduced a code review process to ensure code maintainability and safety, as there was no prior culture for it. While bugs still occurred, they were minimized. I focused on writing code that was easy for the team to work with and ensured code consistency.",
         "stack": "PHP(ver8.4), Laravel(ver10.13.3), MySQL, nginx",
         "position": "Lead Engineer, Full-stack Engineer",
         "scale": "Team of 10 members"
       },
       "2": {
         "title": "HR System Development",
-        "body": "Systemized paper-based HR processes for a major advertising agency. Handled requirements gathering, functional design, and implementation.",
+        "body": "Developed a system to digitize paper-based HR processes for a major advertising agency. Responsible for requirements gathering, functional design, and implementation.",
         "term": "2020~2023",
-        "detail": "Systemized the paper-based HR processes for a major advertising agency.\nPreviously, some processes were managed using Excel and other services, so I developed a system to centralize these processes while integrating with other services.\nI was responsible for a wide range of tasks from requirements gathering to functional design and implementation. The existing employee data was used for authentication, and user access permissions had to be carefully considered.",
+        "detail": "Digitized the paper-based HR processes for a major advertising agency. Previously, a combination of external services and Excel was used, which was replaced with a centralized system that integrated with other services and managed the workflow. Responsible for requirements gathering, functional design, and implementation. Existing employee data was used for authentication, requiring careful management of user access permissions.",
         "stack": "PHP(ver7.4), Laravel(ver8.2.1), MSSQL, nginx",
         "position": "Full-stack Engineer",
         "scale": "Team of 8 members"
       },
       "3": {
         "title": "Migration of 6 Million Records",
-        "body": "Performed migration work for a large customer database. Managed tasks as the team leader while working on the migration itself.",
+        "body": "Performed a large-scale data migration involving 6 million customer records. Acted as the team leader while handling tasks alongside development work.",
         "term": "2017~2019",
-        "detail": "Migrated 6 million customer records for a relaxation industry project, involving both system updates and data migration.\nThe migration covered personal data, card information, and history records.\nReduced data migration time from 8 hours to 1 hour by refactoring the existing process, optimizing queries, and improving memory management.\nMaintained data integrity while addressing inaccurate data and unexpected inputs.\nServed as the team leader, handling task management alongside the migration process.",
+        "detail": "Migrated 6 million customer records for the relaxation industry, including both system updates and data migration. The migration involved sensitive data such as personal information, card details, and historical records. Optimized the migration process, reducing the time from 8 hours to 1 hour by refactoring the existing process, tuning queries, and optimizing memory management.\nMaintained data integrity while addressing inaccurate data and unexpected inputs. Served as the team leader, managing tasks alongside development work.",
         "stack": "PHP, CakePHP(ver3), MySQL, Apache",
         "position": "Team Leader, Programmer",
         "scale": "Team of 12 members"
       },
       "4": {
         "title": "Mobile App Development",
-        "body": "Developed a kimono management app using Flutter. Handled notification features and UI design, using Riverpod for state management.",
+        "body": "Developed a kimono management app using Flutter. Implemented state management with Riverpod and was responsible for notification features and UI design.",
         "term": "2023",
-        "detail": "Developed a kimono management app using Flutter, allowing customers to view information about their stored kimonos.\nHandled notification features and basic design implementation. The backend was built using Java for the API.\nRiverpod was used for state management. Data was stored both locally (using shared_preferences) and on a server.\nImplemented push notifications using Firebase. The project followed a clean architecture approach, with appropriate library selection for each use case.",
+        "detail": "Developed a kimono management app using Flutter, allowing customers to view information about their stored kimonos. Handled the notification feature and basic UI design. The backend API was built with Java.\nState management was implemented using Riverpod. Data was stored both locally (using shared_preferences) and on the server. Firebase was used to implement push notifications. The architecture was based on clean architecture principles, with careful library selection for each requirement.",
         "stack": "Flutter, Riverpod(ver2.1.3), shared_preferences(2.0.15)",
         "position": "Programmer",
         "scale": "4 Flutter Engineers, 3 Java Engineers"
       },
       "5": {
         "title": "Local Government DX Project",
-        "body": "Digitalized paper-based administrative processes for a local government, focusing on birth and marriage registration.",
+        "body": "Digitalized paper-based administrative processes for a local government, focusing on birth and marriage registration systems.",
         "term": "2020",
-        "detail": "Digitalized paper-based administrative processes for a local government in the Kanto region.\nImplemented systems for birth and marriage registrations, handling requirements gathering, database design, and basic implementation.\nSince the team had many junior members, I took on a sub-leader role while contributing to development.",
+        "detail": "Digitalized paper-based administrative processes for a local government in the Kanto region, including birth and marriage registrations. Handled requirements gathering, database design, and core implementation. Since the team had many junior members, I took on a sub-leader role while contributing to development.",
         "stack": "PHP, Laravel, MySQL, nginx",
         "position": "Sub-leader",
         "scale": "Team of 5 members"
@@ -59,7 +59,7 @@
         "title": "Media Industry System Replacement",
         "body": "Replaced a media management system for a major advertising agency, migrating from Ruby to PHP.",
         "term": "2019~2020",
-        "detail": "Handled the replacement of a media management system for a major advertising agency, migrating from Ruby (Ruby on Rails) to PHP.\nThe system needed to retain the same functionality and appearance, making it a more complex task compared to standard development.\nSince no design documents were available, the system was recreated directly from the existing source code.\nEventually took on the role of team leader, managing tasks and progress while contributing to implementation.",
+        "detail": "Replaced a media management system for a major advertising agency, migrating from Ruby (Ruby on Rails) to PHP. The system needed to retain its original functionality and appearance, requiring significant effort compared to typical development. With no design documents available, the system was recreated directly from the existing source code.\nEventually took on the role of team leader, managing tasks and progress while contributing to implementation.",
         "stack": "PHP, Laravel, MySQL",
         "position": "Team Leader, Programmer",
         "scale": "Team of 8 members"
@@ -68,7 +68,7 @@
         "title": "Real Estate System Development",
         "body": "Developed an after-sales service system for real estate customers.",
         "term": "2019",
-        "detail": "Developed an after-sales service system for real estate customers. Conducted requirement definitions and developed the system alongside the team leader. Handled both front-end and back-end tasks, including implementing login functionality and basic CRUD operations.",
+        "detail": "Developed an after-sales service system for real estate customers. Conducted requirement definitions and collaborated with the team leader. Handled both front-end and back-end tasks, including login functionality and basic CRUD operations.",
         "stack": "PHP, Laravel, MySQL",
         "position": "Programmer",
         "scale": "Team of 2 members"
@@ -79,8 +79,9 @@
         "title": "ToDo with Tab",
         "stack": "Flutter, Dart",
         "platform": "iOS/Android App",
+        "description": "Developed a simple ToDo management app with tabs placed on the right side for enhanced user convenience.",
         "point1": "Developed a simple ToDo management app",
-        "point2": "Tabs are placed on the right side to enhance user convenience"
+        "point2": "Placed tabs on the right side to improve user experience"
       },
       "Blog": {
         "title": "Blog Website Creation",
@@ -98,9 +99,9 @@
   },
   "About": {
     "title": "About",
-    "body1": "My name is Horiuchi, a freelance engineer. After studying at Soka University and briefly pursuing a career as a doctor, I was captivated by the world of IT in 2016 and began my career in this field.",
-    "body2": "Since 2017, I have been involved in web system development using PHP as my primary language, honing my technical skills across various projects.",
-    "body3": "In 2019, I became independent and decided to gain a broader range of experiences as a freelance engineer. My main tech stack includes PHP, Laravel, React, Next.js, and Flutter.",
-    "body4": "I provide flexible and efficient solutions to meet client needs, solving real-world problems through technology and contributing to the success of projects."
+    "body1": "My name is Horiuchi, a freelance engineer. After studying at Soka University and briefly pursuing a career as a doctor, I became captivated by the world of IT in 2016 and started my career in this field.",
+    "body2": "Since 2017, I have been involved in web system development using PHP as my primary language, improving my technical skills across various projects.",
+    "body3": "In 2019, I became independent and decided to gain a broader range of experiences as a freelance engineer. My primary tech stack includes PHP, Laravel, React, Next.js, and Flutter.",
+    "body4": "I provide flexible and efficient solutions to meet client needs, solving real-world problems through technology and contributing to project success."
   }
 }
