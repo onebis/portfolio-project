@@ -1,4 +1,3 @@
-'use client'
 import { Spacer } from '@nextui-org/react'
 import { useLocale } from 'next-intl'
 import React from 'react'

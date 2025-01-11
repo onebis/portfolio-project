@@ -1,23 +1,13 @@
-'use client'
 import { Image } from '@nextui-org/image'
 import { Card, CardHeader, CardBody } from '@nextui-org/react'
-import { motion } from 'framer-motion'
 import { useTranslations } from 'next-intl'
 import React from 'react'
 
 export function About() {
   const t = useTranslations('Top.About')
-  const ref = React.useRef(null)
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ opacity: 1, x: 0, y: 0 }}
-      exit={{ opacity: 0, x: -0, y: 20 }}
-      transition={{ duration: 0.5, type: 'easeInOut' }}
-      className='w-full'
-    >
+    <div className='animate-fade-in w-full translate-y-5 opacity-0'>
       <div className='flex justify-center px-6'>
         <Card shadow='none' isBlurred={true}>
           <CardHeader className='flex w-80 justify-center gap-3'>
@@ -40,6 +30,6 @@ export function About() {
           </CardBody>
         </Card>
       </div>
-    </motion.div>
+    </div>
   )
 }
