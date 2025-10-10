@@ -21,10 +21,10 @@ const items = [
     label: 'Products',
     href: '/products',
   },
-  {
-    label: 'Blog',
-    href: '/blog',
-  },
+  // {
+  //   label: 'Blog',
+  //   href: '/blog',
+  // },
 ]
 
 export function Header() {
