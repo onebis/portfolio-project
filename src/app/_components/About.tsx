@@ -7,7 +7,7 @@ export function About() {
   const t = useTranslations('Top.About')
 
   return (
-    <div className='animate-fade-in w-full translate-y-5 opacity-0'>
+    <div className='w-full translate-y-5 animate-fade-in opacity-0'>
       <div className='flex justify-center px-6'>
         <Card shadow='none' isBlurred={true}>
           <CardHeader className='flex w-80 justify-center gap-3'>
