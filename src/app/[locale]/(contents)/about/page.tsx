@@ -30,7 +30,7 @@ export default function About() {
                   <div className='flex flex-col'>
                     <p className='font-bold capitalize'>minoru horiuchi</p>
                     <p className='inline text-small capitalize text-gray-400'>
-                      Full stack web developer
+                      Full stack developer
                     </p>
                   </div>
                 </div>

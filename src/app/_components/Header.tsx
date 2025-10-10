@@ -48,7 +48,7 @@ export function Header() {
       <NavbarContent>
         <NavbarBrand>
           <Link href={getPathname({ locale, href: '/' })}>
-            <p className='font-bold text-inherit'>ACME</p>
+            <p className='font-bold text-inherit'>MinoBlog</p>
           </Link>
         </NavbarBrand>
       </NavbarContent>
