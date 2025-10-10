@@ -1,8 +1,8 @@
 'use client'
+import { Image } from '@nextui-org/image'
 import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react'
 import clsx from 'clsx'
-import Image from 'next/image'
 import { useLocale } from 'next-intl'
 import { useTheme } from 'next-themes'
 import React from 'react'
@@ -51,16 +51,12 @@ export function Header() {
       <NavbarContent>
         <NavbarBrand>
           <Link href={getPathname({ locale, href: '/' })}>
-            <div className='h-8 w-8 overflow-hidden rounded-full'>
-              <Image
-                src={resolvedTheme == 'dark' ? '/images/M_light.png' : '/images/M_dark.png'}
-                alt='Home'
-                width={32}
-                height={32}
-                className='object-cover'
-                priority
-              />
-            </div>
+            <Image
+              src={resolvedTheme == 'dark' ? '/images/m_light.png' : '/images/m_dark.png'}
+              alt='logo'
+              width={32}
+              height={32}
+            />
           </Link>
         </NavbarBrand>
       </NavbarContent>
