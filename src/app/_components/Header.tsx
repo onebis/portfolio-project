@@ -2,7 +2,9 @@
 import { NavbarMenu, NavbarMenuItem, NavbarMenuToggle } from '@nextui-org/navbar'
 import { Navbar, NavbarBrand, NavbarContent, NavbarItem, Link, Button } from '@nextui-org/react'
 import clsx from 'clsx'
+import Image from 'next/image'
 import { useLocale } from 'next-intl'
+import { useTheme } from 'next-themes'
 import React from 'react'
 import { ThemeSwitcher } from '@/app/_components/ThemeSwitcher'
 import { GithubIcon } from '@/app/icons/github'
@@ -37,6 +39,7 @@ export function Header() {
     const newLocale = locale === 'ja' ? 'en' : 'ja'
     router.push(pathname, { locale: newLocale })
   }
+  const { resolvedTheme } = useTheme()
 
   return (
     <Navbar
@@ -48,7 +51,16 @@ export function Header() {
       <NavbarContent>
         <NavbarBrand>
           <Link href={getPathname({ locale, href: '/' })}>
-            <p className='font-bold text-inherit'>MinoBlog</p>
+            <div className='h-8 w-8 overflow-hidden rounded-full'>
+              <Image
+                src={resolvedTheme == 'dark' ? '/images/M_light.png' : '/images/M_dark.png'}
+                alt='Home'
+                width={32}
+                height={32}
+                className='object-cover'
+                priority
+              />
+            </div>
           </Link>
         </NavbarBrand>
       </NavbarContent>
