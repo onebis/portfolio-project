@@ -83,11 +83,17 @@
         "point1": "Developed a simple ToDo management app",
         "point2": "Placed tabs on the right side to improve user experience"
       },
-      "Blog": {
-        "title": "Blog Website Creation",
-        "stack": "NextJS, TypeScript, microCMS",
-        "platform": "Web",
-        "point1": "coming soon ..."
+      "YoutubeSummary": {
+        "title": "YouTube Summary Extension",
+        "stack": "TypeScript, Vite, CRXJS, Manifest V3",
+        "platform": "Chrome Extension",
+        "description": "A Chrome extension that generates structured AI summaries of YouTube videos from their captions. A BYOK approach (bring your own API key) — no account, no tracking, and never routed through a developer server.",
+        "point1": "One-click structured summaries generated from captions",
+        "point2": "BYOK approach with Claude / OpenAI / Gemini support",
+        "point3": "Side panel, three summary modes, JA/EN bilingual",
+        "point4": "API keys stored only in your browser, no tracking",
+        "store": "Chrome Web Store",
+        "site": "Landing page"
       },
       "SampleSite": {
         "title": "Sample Website Creation",

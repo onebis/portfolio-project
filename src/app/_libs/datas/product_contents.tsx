@@ -5,11 +5,11 @@ export const product_contents = {
     href: '/todoapp',
     image: '/images/ToDoWithTabIcon.png',
   },
-  Blog: {
+  YoutubeSummary: {
     id: 2,
-    title: 'Blog',
-    href: '/blog_site',
-    image: '/images/blog_image.png',
+    title: 'YoutubeSummary',
+    href: '/youtube_summary',
+    image: '/images/youtube_summary.png',
   },
   SampleSite: {
     id: 3,

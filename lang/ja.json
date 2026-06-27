@@ -83,11 +83,17 @@
         "point1": "シンプルなToDo管理アプリ開発",
         "point2": "タブを右に配置しユーザーの使いやすさを追求"
       },
-      "Blog": {
-        "title": "ブログサイト作成",
-        "stack": "NextJS,TypeScript,microCMS",
-        "platform": "web",
-        "point1": "coming soon ..."
+      "YoutubeSummary": {
+        "title": "YouTube動画要約 拡張機能",
+        "stack": "TypeScript, Vite, CRXJS, Manifest V3",
+        "platform": "Chrome拡張機能",
+        "description": "YouTube動画の字幕からAIで構造化された要約を生成するChrome拡張機能。BYOK方式（自分のAPIキーを利用）で、アカウント不要・トラッキングなし・開発者サーバーを経由しません。",
+        "point1": "ワンクリックで字幕から構造化された要約を生成",
+        "point2": "Claude / OpenAI / Gemini に対応したBYOK方式",
+        "point3": "サイドパネル表示・3つの要約モード・日英バイリンガル対応",
+        "point4": "APIキーはブラウザ内のみに保存。トラッキングなし",
+        "store": "Chrome ウェブストア",
+        "site": "紹介ページ"
       },
       "SampleSite": {
           "title": "サンプルサイト作成",

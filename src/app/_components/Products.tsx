@@ -2,9 +2,9 @@ import { Spacer } from '@nextui-org/react'
 import { useLocale } from 'next-intl'
 import React from 'react'
 import { MoreButton } from '@/app/_components/MoreButton'
-import { BlogProduct } from '@/app/_components/products/BlogProduct'
 import { SamplePage } from '@/app/_components/products/SamplePage'
 import { ToDoWithTab } from '@/app/_components/products/ToDoWithTab'
+import { YoutubeSummaryProduct } from '@/app/_components/products/YoutubeSummaryProduct'
 import { getPathname } from '@/i18n/routing'
 
 export function Products() {
@@ -17,7 +17,7 @@ export function Products() {
       <div className='animate-fade-in w-full translate-y-5 opacity-0'>
         <div className='flex flex-col justify-between gap-10 sm:flex-row'>
           <ToDoWithTab />
-          <BlogProduct />
+          <YoutubeSummaryProduct />
           <SamplePage />
         </div>
       </div>
