@@ -13,18 +13,24 @@ import {
   ModalHeader,
   useDisclosure,
 } from '@nextui-org/react'
-import { useTranslations } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 
-export function BlogProduct() {
+const STORE_URL =
+  'https://chromewebstore.google.com/detail/youtube-summary/fcdhcpnilhceegpdefdpeklhlgmcadhd'
+
+const SITE_BASE = 'https://onebis.github.io/youtube-summary-extension/'
+const siteUrl = (locale: string) => (locale === 'ja' ? `${SITE_BASE}ja.html` : SITE_BASE)
+
+export function YoutubeSummaryProduct() {
   const t = useTranslations('Top.Products')
   const { isOpen, onOpen, onOpenChange } = useDisclosure()
 
   const item = {
     id: 2,
-    image: '/images/blog_image.png',
-    title: t('Blog.title'),
-    stack: t('Blog.stack'),
-    platform: t('Blog.platform'),
+    image: '/images/youtube_summary.png',
+    title: t('YoutubeSummary.title'),
+    stack: t('YoutubeSummary.stack'),
+    platform: t('YoutubeSummary.platform'),
   }
 
   return (
@@ -45,7 +51,7 @@ export function BlogProduct() {
           <Image
             removeWrapper
             src={item.image}
-            alt='native app image'
+            alt='YouTube Summary extension'
             width={270}
             className='mx-auto rounded-xl object-cover'
           />
@@ -64,6 +70,7 @@ const ProductContentModal = ({
   onOpenChange: () => void
 }) => {
   const t = useTranslations('Top.Products')
+  const locale = useLocale()
 
   return (
     <Modal
@@ -77,21 +84,36 @@ const ProductContentModal = ({
       <ModalContent>
         {(onClose) => (
           <>
-            <ModalHeader className='text-xl'>{t('Blog.title')}</ModalHeader>
+            <ModalHeader className='text-xl'>{t('YoutubeSummary.title')}</ModalHeader>
             <ModalBody className='flex flex-col items-start'>
-              <ul>
-                <li>{t('Blog.point1')}</li>
+              <p>{t('YoutubeSummary.description')}</p>
+              <ul className='list-disc pl-5'>
+                <li>{t('YoutubeSummary.point1')}</li>
+                <li>{t('YoutubeSummary.point2')}</li>
+                <li>{t('YoutubeSummary.point3')}</li>
+                <li>{t('YoutubeSummary.point4')}</li>
               </ul>
               <ul className='text-small text-default-500'>
-                <li>PLATFORM：{t('Blog.platform')}</li>
-                <li>STACK：{t('Blog.stack')}</li>
+                <li>PLATFORM：{t('YoutubeSummary.platform')}</li>
+                <li>STACK：{t('YoutubeSummary.stack')}</li>
               </ul>
               <div className='mt-3 flex w-full justify-center gap-5'>
-                <Image src='/images/blog_image.png' alt='image' width={200} />
+                <Link isExternal href={STORE_URL}>
+                  <Image
+                    src='/images/youtube_summary.png'
+                    alt='YouTube Summary extension'
+                    width={320}
+                  />
+                </Link>
               </div>
-              <Link isExternal href='#' className='mx-auto mt-5 flex justify-center'>
-                my blog
-              </Link>
+              <div className='mx-auto mt-5 flex justify-center gap-6'>
+                <Link isExternal href={STORE_URL}>
+                  {t('YoutubeSummary.store')}
+                </Link>
+                <Link isExternal href={siteUrl(locale)}>
+                  {t('YoutubeSummary.site')}
+                </Link>
+              </div>
             </ModalBody>
             <ModalFooter>
               <Button color='danger' variant='light' onPress={onClose}>
