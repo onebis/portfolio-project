@@ -16,8 +16,8 @@ export function Products() {
       <Spacer y={10} />
       <div className='animate-fade-in w-full translate-y-5 opacity-0'>
         <div className='flex flex-col justify-between gap-10 sm:flex-row'>
-          <ToDoWithTab />
           <YoutubeSummaryProduct />
+          <ToDoWithTab />
           <SamplePage />
         </div>
       </div>
