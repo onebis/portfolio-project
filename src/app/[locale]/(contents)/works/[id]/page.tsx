@@ -1,6 +1,7 @@
 'use client'
 import { Chip, Link } from '@nextui-org/react'
 import { motion } from 'framer-motion'
+import { notFound } from 'next/navigation'
 import { useLocale, useTranslations } from 'next-intl'
 import React from 'react'
 import { work_contents } from '@/app/_libs/datas/work_contents'
@@ -9,6 +10,7 @@ import { getPathname } from '@/i18n/routing'
 export default function WorkContent({ params }: { params: { id: number } }) {
   const t = useTranslations('Top.Works')
   const item = work_contents.filter((item) => item.id == params.id)[0]
+  if (!item) notFound()
   const ref = React.useRef(null)
   const locale = useLocale()
 
